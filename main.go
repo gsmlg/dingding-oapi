@@ -39,6 +39,7 @@ func main() {
 	r := bytes.NewReader([]byte(fmt.Sprintf("{\"msgtype\": \"text\",\"text\": {\"content\": \"%s\"}}", msg)))
 	resp, err := http.Post(baseurl, "application/json", r)
 	if err != nil {
+		fmt.Printf("Error: %v", err)
 		os.Exit(1)
 	}
 	defer resp.Body.Close()
