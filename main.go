@@ -34,8 +34,6 @@ func main() {
 
     baseurl := fmt.Sprintf("https://oapi.dingtalk.com/robot/send?%s", params.Encode())
 
-    fmt.Printf("%s\n", baseurl)
-
     msg := os.Args[1:]
 
 	r := bytes.NewReader([]byte(fmt.Sprintf("{\"msgtype\": \"text\",\"text\": {\"content\": \"%s\"}}", msg)))
