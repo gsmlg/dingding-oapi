@@ -1,4 +1,4 @@
 default:
 
 build:
-	CGO=0 go build -o ding .
+	CGO_ENABLED=0 go build -o ding .
